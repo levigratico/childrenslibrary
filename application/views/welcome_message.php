@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	Hello world sdadasd levi
+	<?php echo $name; ?>
 </div>
 
 </body>
