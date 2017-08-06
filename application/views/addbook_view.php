@@ -60,10 +60,10 @@
                         <li>
                             <a href="#"><i class="glyphicon glyphicon-book"></i> Book<span class="fa arrow"></span></a>
                              <ul class="nav nav-second-level">
-                                <li>
+                                <li id="licreatebook">
                                     <a href="#">Create Book</a>
                                 </li>
-                                <li>
+                                <li id="lilistofbooks">
                                     <a href="#">List of Books</a>
                                 </li>
                             </ul>
@@ -103,7 +103,9 @@
                 <div class="col-lg-8">
                     <h3>Book Information</h3>
                     <hr>
-                    <label>Title</label>
+                    <br/><label>Upload Cover Photo</label>
+                    <br/><input type="file" class="form-control">
+                    <br/><label>Title</label>
                     <input class="form-control">
                     <br/><label>Author</label>
                     <input type="text" class="form-control">
@@ -124,15 +126,17 @@
                     <textarea class="form-control" ></textarea>
                     <br/><label>Description</label>
                     <textarea class="form-control"></textarea>
-                    <br/><label>Upload Cover Photo</label>
-                    <input type="file" class="form-control">
+                    <br/><button type="button" class="btn btn-success btn-lg">Save</button>
+
                 </div>
             </div>
           </div>
             <!-- /.row -->
             <div class="form-group" id="divlistofbooks">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
+                       <h3>List of Books</h3>
+                       <hr>
                        <table class="table table-hover">
                         <thead>
                             <tr>
@@ -145,6 +149,30 @@
                                  <td>Language</td>
                             </tr>
                         </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>sample title</td>
+                                <td>sample author</td>
+                                <td>sample illustrator</td>
+                                <td>sample laguage</td>
+                                <td>sample pages</td>
+                                <td>sample language</td>
+                                <td>
+                                    <button type="button" class="btn-btn default form-control" data-toggle="modal" data-target="#myModal" title="Upload pages"><span class="glyphicon glyphicon-open"></span></button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-btn default form-control" data-toggle="tooltip" title="Edit book information">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-btn default form-control" data-toggle="tooltip" title="Delete this book">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
 
                        </table>
                     </div>
@@ -153,7 +181,33 @@
         </div>
         <!-- /#page-wrapper -->
 
+        <!-- Modal for upload pages -->
+        <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Upload Content of the Book here</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="file" class="form-control">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
     </div>
+  </div>
+
+    </div>
+
+
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -171,6 +225,23 @@
     <script src="<?php echo base_url('assets/template/data/morris-data.js');?>"></script>
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url('assets/template/dist/js/sb-admin-2.js');?>"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+            $("#divcreatebook").hide();
+            $("#divlistofbooks").hide();
+
+            $('#licreatebook').click(function(){
+                $("#divcreatebook").show();
+                $("#divlistofbooks").hide();
+            });
+            $("#lilistofbooks").click(function(){
+                $("#divcreatebook").hide();
+                $("#divlistofbooks").show();
+            });
+        });
+    </script>
 
 </body>
 
