@@ -83,7 +83,7 @@
                                   </div>
                                   <div>
                                   	<div style="border: 1px solid red; border-radius: 40px; width:60px; padding: 10px; display: inline-block; margin: 10px;">
-                                		<div style="text-align: center; font-size: 20px; border: 1px solid red; border-radius: 30px; padding: 5px;">
+                                		<div style="text-align: center; font-size: 20px; border: 1px solid red; border-radius: 30px; padding: 5px;" class="popoverAction">
                                 		  <i class="glyphicon glyphicon-user"></i>
                                 	    </div>
                                 	</div>
@@ -91,7 +91,7 @@
                                   </div>
                                   <div class="popoverAction">
                                   	<div style="border: 1px solid red; border-radius: 40px; width:60px; padding: 10px; display: inline-block; margin: 10px;">
-                                		<div style="text-align: center; font-size: 20px; border: 1px solid red; border-radius: 30px; padding: 5px;">
+                                		<div style="text-align: center; font-size: 20px; border: 1px solid red; border-radius: 30px; padding: 5px;" class="popoverAction">
                                 		  <i class="glyphicon glyphicon-user"></i>
                                 	    </div>
                                 	</div>
@@ -99,7 +99,7 @@
                                   </div>
                                   <div class="popoverAction">
                                   	<div style="border: 1px solid red; border-radius: 40px; width:60px; padding: 10px; display: inline-block; margin: 10px;">
-                                		<div style="text-align: center; font-size: 20px; border: 1px solid red; border-radius: 30px; padding: 5px;">
+                                		<div style="text-align: center; font-size: 20px; border: 1px solid red; border-radius: 30px; padding: 5px;" class="popoverAction">
                                 		  <i class="glyphicon glyphicon-user"></i>
                                 	    </div>
                                 	</div>
